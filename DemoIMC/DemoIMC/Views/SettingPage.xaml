@@ -2,13 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DemoIMC.Views.SettingPage"
+             xmlns:vm="clr-namespace:DemoIMC.ViewModels"
              Title="Setting"
              Icon="Setting">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <ContentPage.BindingContext>
+        <vm:SettingViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="10,20,0,0">
+        <Label Text="Respaldo de la base de datos" VerticalTextAlignment="Center"/>
+        <Button Text="Exportar" 
+                 VerticalOptions="Start"
+                HorizontalOptions="Start"
+                Command="{Binding ExportarCommand}"/>
+
+        <Button Text="importar" 
+                VerticalOptions="Start"
+                HorizontalOptions="Start"
+                 Command="{Binding ImportarCommand}"/>
+
+
+    </StackLayout>
+   
 </ContentPage>
