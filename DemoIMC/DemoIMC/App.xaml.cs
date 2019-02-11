@@ -12,7 +12,8 @@ namespace DemoIMC
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new MenuPage());
+           
         }
 
         protected override void OnStart()

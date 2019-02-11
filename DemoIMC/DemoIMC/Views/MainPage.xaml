@@ -4,65 +4,21 @@
              xmlns:local="clr-namespace:DemoIMC"
              xmlns:vm="clr-namespace:DemoIMC.ViewModels"
              x:Class="DemoIMC.Views.MainPage"
-             Title="Calculos IMC's">
+             Title="Home"
+             Icon="Home">
     <ContentPage.BindingContext>
         <vm:MainViewModel/>
     </ContentPage.BindingContext>
 
-    <Grid Padding="10,10,10,10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0"
-              HorizontalOptions="Center">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
-            <Button Text="Ver Usurios" 
-                    Font="12"
-                    Grid.Row="0" 
-                    Grid.Column="0" 
-                    BorderRadius="10" 
-                    HeightRequest="40" 
-                    BorderColor="Blue" 
-                    BackgroundColor="Transparent" 
-                    BorderWidth="1"  
-                    TextColor="Navy"  
-                    Command="{Binding ViewUserCommand}" />
-            <Button Text="Calcular Imc"
-                    Font="12"
-                    Grid.Row="0" 
-                    Grid.Column="1" 
-                    BorderRadius="10" 
-                    HeightRequest="40" 
-                    BorderColor="Blue" 
-                    BackgroundColor="Transparent" 
-                    BorderWidth="1"  
-                    TextColor="Navy"  
-                    Command="{Binding ViewImcCommand}" />
-            <Button Text="Respaldo"
-                    Font="12"
-                    Grid.Row="0" 
-                    Grid.Column="2" 
-                    BorderRadius="10" 
-                    HeightRequest="40" 
-                    BorderColor="Blue" 
-                    BackgroundColor="Transparent" 
-                    BorderWidth="1"  
-                    TextColor="Navy"  
-                    Command="{Binding RespaldoCommand}" />
-        </Grid>
+    <StackLayout  Padding="10,10,10,10">
+        <Label Text="imagen"/>
+
         <ListView x:Name="Listado" 
+                 
                         ItemsSource="{Binding }" 
                         SelectedItem="{Binding Seleccionado}" 
                         RowHeight="115"
-                        Grid.Row="1"
+                       
                    ItemSelected="List_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -135,6 +91,6 @@
                     Font="10"
                    HorizontalOptions="Center"
                    VerticalOptions="End"
-                   Grid.Row="4"/>
-    </Grid>
+                   />
+    </StackLayout>
 </ContentPage>

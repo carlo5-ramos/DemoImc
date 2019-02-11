@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:DemoIMC.ViewModels"
              x:Class="DemoIMC.Views.ImcPage"
-             Title="Imc's">
+             Title="Calculos IMC's"
+             Icon="imc">
 
     <ContentPage.BindingContext>
         <vm:ImcsViewModel/>
