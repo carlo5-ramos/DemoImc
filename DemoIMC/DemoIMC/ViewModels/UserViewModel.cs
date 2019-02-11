@@ -15,6 +15,7 @@ namespace DemoIMC.ViewModels
 
         private string nombre;
         private string apellido;
+        private string nombreCompleto;
         private string sexo;
         private int edad;
         private double peso;
@@ -25,12 +26,22 @@ namespace DemoIMC.ViewModels
         public string Nombre
         {
             get { return nombre; }
-            set { SetValue(ref nombre, value); }
+            set { SetValue(ref nombre, value);
+                OnPropertyChanged(nameof(NombreCompleto));
+            }
         }
         public string Apellido
         {
             get { return apellido; }
-            set { SetValue(ref apellido, value); }
+            set { SetValue(ref apellido, value);
+                OnPropertyChanged(nameof(NombreCompleto));
+            }
+        }
+        
+        public string NombreCompleto
+        {
+            get { return $"{Nombre} {Apellido}"; }
+            set { SetValue(ref nombreCompleto, value); }
         }
         public string Sexo
         {

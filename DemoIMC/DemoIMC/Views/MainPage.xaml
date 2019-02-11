@@ -39,16 +39,17 @@
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <Label Text="{Binding NombreUser}" 
+                                <Label Text="{Binding NombreCompletoUser}" 
                                    Grid.Row="0"
                                    Grid.Column="0"
+                                       Grid.ColumnSpan="3"
                                    FontAttributes="Bold"
                                    TextColor="Black" />
-                                <Label Text="{Binding ApellidoUser}" 
+                                <!--<Label Text="{Binding ApellidoUser}" 
                                    Grid.Row="0"
                                    Grid.Column="1"
                                    FontAttributes="Bold"
-                                   TextColor="Black" />
+                                   TextColor="Black" />-->
                                 <Label Text="Peso" 
                                    Grid.Row="1"
                                    Grid.Column="0" 

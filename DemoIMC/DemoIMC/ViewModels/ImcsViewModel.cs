@@ -15,6 +15,7 @@ namespace DemoIMC.ViewModels
         private int usuarioid;
         private string nombreuser;
         private string apellidouser;
+        private string nombrecompletouser;
         private string sexouser;
         private int edaduser;
         private double pesouser;
@@ -34,13 +35,23 @@ namespace DemoIMC.ViewModels
         public string NombreUser
         {
             get { return nombreuser; }
-            set { SetValue(ref nombreuser, value); }
+            set { SetValue(ref nombreuser, value);
+                OnPropertyChanged(nameof(NombreCompletoUser));
+            }
         }
 
         public string ApellidoUser
         {
             get { return apellidouser; }
-            set { SetValue(ref apellidouser, value); }
+            set { SetValue(ref apellidouser, value);
+                OnPropertyChanged(nameof(NombreCompletoUser));
+            }
+        }
+
+        public string NombreCompletoUser
+        {
+            get { return $"{NombreUser} {ApellidoUser}"; }
+            set { SetValue(ref nombrecompletouser, value); }
         }
 
         public string SexoUser

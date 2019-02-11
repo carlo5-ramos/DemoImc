@@ -22,5 +22,8 @@ namespace DemoIMC.Models
         public double Imc { get; set; }
      
         public DateTime FechaRegistro { get; set; }
+
+        public string NombreCompletoUser =>
+            string.Format("{0} {1}", NombreUser, ApellidoUser);
     }
 }

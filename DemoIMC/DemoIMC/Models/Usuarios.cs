@@ -12,5 +12,7 @@ namespace DemoIMC.Models
         public int Edad { get; set; }
         public double Peso { get; set; }
         public double Estatura { get; set; }
+        public string NombreCompleto => 
+            string.Format("{0} {1}", Nombre, Apellido);
     }
 }

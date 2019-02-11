@@ -1,4 +1,4 @@
-﻿using DemoIMC.Backup;
+﻿//using DemoIMC.Backup;
 using DemoIMC.Models;
 using DemoIMC.Views;
 using System;
@@ -22,15 +22,15 @@ namespace DemoIMC.ViewModels
             {
                 await App.Current.MainPage.Navigation.PushAsync(new ImcPage());
             });
-            RespaldoCommand = new Command(()=> Respaldo());
+            //RespaldoCommand = new Command(()=> Respaldo());
         }
 
         #region Methods
-        void Respaldo()
-        {
-            var respaldo = new Respaldo();
-            respaldo.BackupDatabase();
-        }
+        //void Respaldo()
+        //{
+        //    var respaldo = new Respaldo();
+        //    respaldo.BackupDatabase();
+        //}
         #endregion
         #endregion
 

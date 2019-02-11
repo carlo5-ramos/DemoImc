@@ -52,16 +52,18 @@
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            <Label Text="{Binding Nombre}" 
+                            <Label Text="{Binding NombreCompleto}" 
                                    Grid.Row="0" 
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="3"
                                    Font="20" 
                                    TextColor="Black" />
-                            <Label Text="{Binding Apellido}" 
+                            <!--<Label Text="{Binding Apellido}" 
                                    Grid.Row="0" Font="20" 
                                    Grid.Column="1" 
                                    HorizontalOptions="EndAndExpand" 
                                    HorizontalTextAlignment="End" 
-                                   TextColor="Black" />
+                                   TextColor="Black" />-->
                             <Label Text="Peso" 
                                    Grid.Row="1"
                                    Grid.Column="0" 
