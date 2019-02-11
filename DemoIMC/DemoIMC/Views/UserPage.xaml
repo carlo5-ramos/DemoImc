@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:DemoIMC.ViewModels"
+             x:Class="DemoIMC.Views.UserPage"
+             Title="Usuario">
+
+    <ContentPage.BindingContext>
+        <vm:UserViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout Spacing="12">
+        <Entry Text="{Binding Nombre}" 
+               HeightRequest="40" 
+               BackgroundColor="White" 
+               Placeholder="Nombre/s" 
+               HorizontalOptions="FillAndExpand"/>
+
+        <Entry  Text="{Binding Apellido}" 
+                BackgroundColor="White" 
+                HeightRequest="40" 
+                Placeholder="Apellido/s" 
+                HorizontalOptions="FillAndExpand"/>
+
+        <StackLayout Orientation="Horizontal">
+            <Picker SelectedItem="{Binding Sexo}" 
+                    Title="Sexo" 
+                    BackgroundColor="White" 
+                    HeightRequest="40" 
+                    HorizontalOptions="FillAndExpand">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Masculino</x:String>
+                        <x:String>Femenino</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Entry Text="{Binding Edad}"
+                   Keyboard="Numeric"
+                   HeightRequest="40" 
+                   BackgroundColor="White" 
+                   Placeholder="Edad" 
+                   HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Entry Text="{Binding Peso}"
+                   Keyboard="Numeric"
+                   HeightRequest="40" 
+                   BackgroundColor="White" 
+                   Placeholder="Peso" 
+                   HorizontalOptions="FillAndExpand"/>
+            <Entry Text="{Binding Estatura}"
+                   Keyboard="Numeric"
+                   HeightRequest="40" 
+                   BackgroundColor="White" 
+                   Placeholder="Estatura" 
+                   HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     Padding="5,0,5,0">
+            <Button x:Name="btnInsert" 
+                    Text="Insert" 
+                    Font="12"
+                    BorderRadius="10" 
+                    HeightRequest="35" 
+                    BorderColor="Blue" 
+                    BackgroundColor="Transparent" 
+                    BorderWidth="1"  
+                    TextColor="Navy"  
+                    Command="{Binding InsertCommand}" />
+            <Button x:Name="btnUpdate" 
+                    Text="Update" 
+                    Font="12"
+                    BorderRadius="10" 
+                    HeightRequest="35" 
+                    BorderColor="Blue" 
+                    BackgroundColor="Transparent" 
+                    BorderWidth="1"  
+                    TextColor="Navy"  
+                    Command="{Binding UpdateCommand}" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     Padding="5,0,5,0">
+            <Button x:Name="btnCancel" 
+                    Text="Cancelar" 
+                    Font="12"
+                    BorderRadius="10" 
+                    HeightRequest="35" 
+                    BorderColor="Blue" 
+                    BackgroundColor="Transparent" 
+                    BorderWidth="1"  
+                    TextColor="Navy"  
+                    Command="{Binding CancelarCommand}" />
+            <Button x:Name="btnDelete" 
+                    Text="Delete" 
+                    Font="12"
+                    BorderRadius="10" 
+                    HeightRequest="35" 
+                    BorderColor="Blue" 
+                    BackgroundColor="Transparent" 
+                    BorderWidth="1"  
+                    TextColor="Navy"  
+                    Command="{Binding DeleteCommand}" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

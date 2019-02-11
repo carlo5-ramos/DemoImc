@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:DemoIMC.ViewModels"
+             x:Class="DemoIMC.Views.ListUserPage"
+             Title="Usuarios">
+
+    <ContentPage.BindingContext>
+        <vm:UserViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid Padding="10,20,10,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="New User" 
+                    Grid.Row="0" 
+                    Grid.Column="1" 
+                    BorderRadius="10" 
+                    HeightRequest="40" 
+                    BorderColor="Blue" 
+                    BackgroundColor="Transparent" 
+                    BorderWidth="1"  
+                    TextColor="Navy"  
+                    Command="{Binding AddUserCommand}" />
+        </Grid>
+        <ListView x:Name="UserListView" 
+                  HasUnevenRows="true" 
+                  Grid.Row="1" 
+                  SeparatorColor="Black" 
+                  ItemsSource="{Binding ListUsuarios}"  
+                  ItemSelected="List_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid  Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Nombre}" 
+                                   Grid.Row="0" 
+                                   Font="20" 
+                                   TextColor="Black" />
+                            <Label Text="{Binding Apellido}" 
+                                   Grid.Row="0" Font="20" 
+                                   Grid.Column="1" 
+                                   HorizontalOptions="EndAndExpand" 
+                                   HorizontalTextAlignment="End" 
+                                   TextColor="Black" />
+                            <Label Text="Peso" 
+                                   Grid.Row="1"
+                                   Grid.Column="0" 
+                                   TextColor="Black"
+                                   FontAttributes="Bold"/>
+                            <Label Text="Estatura" 
+                                   Grid.Row="1" 
+                                   Grid.Column="1" 
+                                   TextColor="Black" 
+                                   FontAttributes="Bold"/>
+                            <Label Text="Edad" 
+                                   Grid.Row="1" 
+                                   Grid.Column="2" 
+                                   TextColor="Black"
+                                   FontAttributes="Bold"/>
+                            <Label Text="{Binding Peso}" 
+                                   Grid.Row="2" 
+                                   Grid.Column="0" 
+                                   TextColor="Black" />
+                            <Label Text="{Binding Estatura}" 
+                                   Grid.Row="2" 
+                                   Grid.Column="1" 
+                                   TextColor="Black" />
+                            <Label Text="{Binding Edad}" 
+                                   Grid.Row="2" Grid.Column="2" 
+                                   HorizontalOptions="FillAndExpand" 
+                                   TextColor="Black" />
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </Grid>
+</ContentPage>

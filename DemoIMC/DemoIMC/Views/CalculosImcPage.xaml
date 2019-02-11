@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:DemoIMC.ViewModels"
+             x:Class="DemoIMC.Views.CalculosImcPage"
+             Title="Datos Generales">
+    <ContentPage.BindingContext>
+        <vm:ImcsViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout Spacing="12">
+        <Entry Text="{Binding NombreUser}" 
+               HeightRequest="40" 
+               BackgroundColor="White" 
+               Placeholder="Nombre/s" 
+               HorizontalOptions="FillAndExpand"/>
+        <Entry  Text="{Binding ApellidoUser}" 
+                BackgroundColor="White" 
+                HeightRequest="40" 
+                Placeholder="Apellido/s" 
+                HorizontalOptions="FillAndExpand"/>
+
+        <StackLayout Orientation="Horizontal">
+            <Picker SelectedItem="{Binding SexoUser}" 
+                    Title="Sexo" 
+                    BackgroundColor="White" 
+                    HeightRequest="40" 
+                    HorizontalOptions="FillAndExpand">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Masculino</x:String>
+                        <x:String>Femenino</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Entry Text="{Binding EdadUser, StringFormat='{0} años'}"
+                   Keyboard="Numeric"
+                   HeightRequest="40" 
+                   BackgroundColor="White" 
+                   Placeholder="Edad" 
+                   HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Entry Text="{Binding PesoUser, StringFormat='{0} lb'}"
+                   Keyboard="Numeric"
+                   HeightRequest="40" 
+                   BackgroundColor="White" 
+                   Placeholder="Peso" 
+                   HorizontalOptions="FillAndExpand"/>
+            <Entry Text="{Binding EstaturaUser, StringFormat='{0} mts'}"
+                   Keyboard="Numeric"
+                   HeightRequest="40" 
+                   BackgroundColor="White" 
+                   Placeholder="Estatura" 
+                   HorizontalOptions="FillAndExpand"/>
+            <Entry Text="{Binding Imc, StringFormat=' {0:F2} imc'}"
+                   Keyboard="Numeric"
+                   HeightRequest="40" 
+                   BackgroundColor="White" 
+                   Placeholder="Estatura" 
+                   HorizontalOptions="FillAndExpand"/>
+            
+        </StackLayout>
+        <Label Text="{Binding FechaRegistro, StringFormat='Su Ultimo calculo fue: {0:dd/MM/yy}'}" 
+                                   Grid.Row="2" 
+                                   Grid.Column="0" 
+                                   TextColor="Black" />
+
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     Padding="5,0,5,0">
+            <Button x:Name="btnCancel" 
+                    Text="Cancelar" 
+                    BorderRadius="10" 
+                    HeightRequest="40" 
+                    BorderColor="Blue" 
+                    BackgroundColor="Transparent" 
+                    BorderWidth="1"  
+                    TextColor="Navy"  
+                    Command="{Binding CancelarCommand}" />
+            <Button x:Name="btnDelete" 
+                    Text="Delete" 
+                    BorderRadius="10" 
+                    HeightRequest="40" 
+                    BorderColor="Blue" 
+                    BackgroundColor="Transparent" 
+                    BorderWidth="1"  
+                    TextColor="Navy"  
+                    Command="{Binding DeleteCommand}" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
