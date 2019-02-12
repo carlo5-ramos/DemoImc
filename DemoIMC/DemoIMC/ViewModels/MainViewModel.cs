@@ -38,7 +38,7 @@ namespace DemoIMC.ViewModels
         #region Commands
         public Command ViewUserCommand { get; set; }
         public Command ViewImcCommand { get; set; }
-        public Command RespaldoCommand { get; set; }
+        
         #endregion
     }
 }
