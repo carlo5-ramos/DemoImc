@@ -12,12 +12,9 @@ namespace DemoIMC.ViewModels
         public SettingViewModel()
         {
             ExportarCommand = new Command(() => Mensaje());
-
         }
 
         #region Metodos
-
-
         public async void Mensaje()
         {
             var mensaje = await App.Current.MainPage.DisplayAlert("hola", "haz guardadi", "ok", "Cancel");
@@ -29,11 +26,8 @@ namespace DemoIMC.ViewModels
             else
             {
                 return;
-            }
-            
+            }      
         }
-
-
         #endregion
 
         //await App.Current.MainPage.Navigation.PushAsync(new ListUserPage ());

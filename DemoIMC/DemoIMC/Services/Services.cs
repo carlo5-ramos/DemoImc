@@ -14,7 +14,6 @@ namespace DemoIMC.Services
         SQLiteAsyncConnection _conecction;
         #endregion
         
-
         #region Constructors
         public Services()
         {

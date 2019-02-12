@@ -115,8 +115,33 @@ namespace DemoIMC.ViewModels
             user.Edad = Edad;
             user.Peso = Peso;
             user.Estatura = Estatura;
-            var result = await Servi.Insert(user);
 
+            if (string.IsNullOrEmpty(user.Nombre))
+            {
+                await App.Current.MainPage.DisplayAlert("Advertencia", "Debe ingresar su nombre/s", "Aceptar");
+                return;
+            }
+            if (string.IsNullOrEmpty(user.Apellido))
+            {
+                await App.Current.MainPage.DisplayAlert("Advertencia", "Debe ingresar su apellido/s", "Aceptar");
+                return;
+            }
+            if (user.Edad.Equals(0))
+            {
+                await App.Current.MainPage.DisplayAlert("Advertencia", "Debe ingresar su edad", "Aceptar");
+                return;
+            }
+            if (user.Peso.Equals(0))
+            {
+                await App.Current.MainPage.DisplayAlert("Advertencia", "Debe ingresar su peso en libras", "Aceptar");
+                return;
+            }
+            if (user.Estatura.Equals(0))
+            {
+                await App.Current.MainPage.DisplayAlert("Advertencia", "Debe ingresar su estatura", "Aceptar");
+                return;
+            }
+            var result = await Servi.Insert(user);
             if (result == 1)
             {
                 await App.Current.MainPage.DisplayAlert("Mensaje de Aviso", "Registro Guardado con exito!!!", "Aceptar");
