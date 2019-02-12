@@ -131,15 +131,39 @@ namespace DemoIMC.ViewModels
                 await App.Current.MainPage.DisplayAlert("Advertencia", "Debe ingresar su edad", "Aceptar");
                 return;
             }
+            else
+            {
+                if (user.Edad < 0)
+                {
+                    await App.Current.MainPage.DisplayAlert("Advertencia", "Su edad tiene que ser mayor a cero", "Aceptar");
+                    return;
+                }
+            }
             if (user.Peso.Equals(0))
             {
                 await App.Current.MainPage.DisplayAlert("Advertencia", "Debe ingresar su peso en libras", "Aceptar");
                 return;
             }
+            else
+            {
+                if (user.Peso < 0)
+                {
+                    await App.Current.MainPage.DisplayAlert("Advertencia", "Su peso tiene que ser mayor a cero", "Aceptar");
+                    return;
+                }
+            }
             if (user.Estatura.Equals(0))
             {
                 await App.Current.MainPage.DisplayAlert("Advertencia", "Debe ingresar su estatura", "Aceptar");
                 return;
+            }
+            else
+            {
+                if (user.Estatura < 0)
+                {
+                    await App.Current.MainPage.DisplayAlert("Advertencia", "Su estatura tiene que tener datos mayor a cero", "Aceptar");
+                    return;
+                }
             }
             var result = await Servi.Insert(user);
             if (result == 1)
