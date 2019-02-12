@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace DemoIMC.ViewModels
@@ -23,6 +24,7 @@ namespace DemoIMC.ViewModels
         private double imc;
         private DateTime fecharegistro;
         private Usuarios userselected;
+        //private bool _isRefreshing = false;
         #endregion
 
         #region Properties
@@ -97,6 +99,17 @@ namespace DemoIMC.ViewModels
         }
 
         public List<Imcs> ListImcs { get; set; } = new List<Imcs>();
+
+        
+        //public bool IsRefreshing
+        //{
+        //    get { return _isRefreshing; }
+        //    set
+        //    {
+        //        _isRefreshing = value;
+        //        OnPropertyChanged(nameof(IsRefreshing));
+        //    }
+        //}
 
         #endregion
 
@@ -196,6 +209,18 @@ namespace DemoIMC.ViewModels
         public Command InsertCommand { get; set; }
         public Command CancelarCommand { get; set; }
         public Command DeleteCommand { get; set; }
+        //public ICommand RefreshCommand
+        //{
+        //    get
+        //    {
+        //        return new Command(async () =>
+        //       {
+        //           IsRefreshing = true;
+        //           GetImcs();
+        //           IsRefreshing = false;
+        //       });
+        //    }
+        //}
         #endregion
     }
 }

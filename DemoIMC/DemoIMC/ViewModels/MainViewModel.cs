@@ -25,6 +25,7 @@ namespace DemoIMC.ViewModels
             //RespaldoCommand = new Command(()=> Respaldo());
         }
 
+        
         #region Methods
         //void Respaldo()
         //{
