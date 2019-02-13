@@ -11,7 +11,7 @@ namespace DemoIMC
         public App()
         {
             InitializeComponent();
-
+            NavigationPage.SetHasNavigationBar(this, false);
             MainPage = new NavigationPage(new MenuPage());
            
         }

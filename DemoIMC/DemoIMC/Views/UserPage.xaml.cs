@@ -17,7 +17,8 @@ namespace DemoIMC.Views
 	{
 		public UserPage ()
 		{
-			InitializeComponent ();
+            NavigationPage.SetHasNavigationBar(this, false);
+            InitializeComponent ();
 		}
     }
 }

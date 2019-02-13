@@ -17,7 +17,8 @@ namespace DemoIMC.Views
 		public ImcPage ()
 		{
 			InitializeComponent ();
-		}
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
 
         protected override async void OnAppearing()
         {
