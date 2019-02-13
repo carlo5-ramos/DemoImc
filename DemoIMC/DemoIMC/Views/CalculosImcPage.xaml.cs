@@ -15,6 +15,7 @@ namespace DemoIMC.Views
 		public CalculosImcPage ()
 		{
 			InitializeComponent ();
-		}
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
 	}
 }

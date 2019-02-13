@@ -12,6 +12,7 @@ namespace DemoIMC.Views
 		public ListUserPage ()
 		{
 			InitializeComponent ();
+            NavigationPage.SetHasNavigationBar(this, false);
             OnAppearing();
 		}
 

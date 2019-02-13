@@ -16,6 +16,7 @@ namespace DemoIMC.Views
         public MenuPage ()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
         }
     }

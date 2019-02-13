@@ -15,6 +15,7 @@ namespace DemoIMC.Views
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             OnAppearing();
         }
         protected override async void OnAppearing()
