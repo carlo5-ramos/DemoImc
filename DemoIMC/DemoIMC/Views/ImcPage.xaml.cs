@@ -17,13 +17,25 @@ namespace DemoIMC.Views
 		public ImcPage ()
 		{
 			InitializeComponent ();
-		}
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
 
         protected override async void OnAppearing()
         {
             base.OnAppearing();
             var Servi = new Services<Usuarios>();
             pkUsuario.ItemsSource = await Servi.GetAll();
+            btnCalcular.Clicked += BtnCalcular_Clicked;
+        }
+
+        private async void BtnCalcular_Clicked(object sender, EventArgs e)
+        {
+            if (pkUsuario.ItemsSource.Equals(""))
+            {
+                await App.Current.MainPage.DisplayAlert("Advertencia", "Debe seleccionar un usuario para efectuar el calculo", "Aceptar");
+                pkUsuario.Focus();
+                return;
+            }
         }
     }
 }

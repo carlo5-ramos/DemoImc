@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DemoIMC.Views.MenuPage"
             xmlns:local="clr-namespace:DemoIMC.Views">
-  <!--Pages can be added as references or inline-->
-  <local:MainPage />
-  <local:ListUserPage />
+    <!--Pages can be added as references or inline-->
+  <local:MainPage  />
+  <local:ListUserPage  />
   <local:ImcPage />
   <local:SettingPage />
-  
 </TabbedPage>
+    
+    <!--Cambio-->

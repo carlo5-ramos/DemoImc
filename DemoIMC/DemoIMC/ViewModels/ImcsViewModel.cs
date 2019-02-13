@@ -144,6 +144,11 @@ namespace DemoIMC.ViewModels
         #region Methods
         private async void Calcular(object obj)
         {
+            if (UserSeleted.Peso.Equals(0) && UserSeleted.Estatura.Equals(0))
+            {
+                await App.Current.MainPage.DisplayAlert("Advertencia", "Debe seleccionar un usuario para efectuar el calculo", "Aceptar");
+                return;
+            }
             double calcuImc = UserSeleted.Peso / Math.Pow(UserSeleted.Estatura, 2);
             await App.Current.MainPage.DisplayAlert("Mensaje de Aviso", "Su IMC es: " + calcuImc, "Aceptar");
         }

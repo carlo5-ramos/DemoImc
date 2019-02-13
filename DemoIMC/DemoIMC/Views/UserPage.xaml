@@ -9,20 +9,23 @@
         <vm:UserViewModel/>
     </ContentPage.BindingContext>
     <StackLayout Spacing="12">
-        <Entry Text="{Binding Nombre}" 
+        <Entry Text="{Binding Nombre}"
+               x:Name="txtNombre"
                HeightRequest="40" 
                BackgroundColor="White" 
                Placeholder="Nombre/s" 
                HorizontalOptions="FillAndExpand"/>
 
-        <Entry  Text="{Binding Apellido}" 
+        <Entry  Text="{Binding Apellido}"
+                x:Name="txtApellido"
                 BackgroundColor="White" 
                 HeightRequest="40" 
                 Placeholder="Apellido/s" 
                 HorizontalOptions="FillAndExpand"/>
 
         <StackLayout Orientation="Horizontal">
-            <Picker SelectedItem="{Binding Sexo}" 
+            <Picker SelectedItem="{Binding Sexo}"
+                    x:Name="pkSexo"
                     Title="Sexo" 
                     BackgroundColor="White" 
                     HeightRequest="40" 
@@ -35,6 +38,7 @@
                 </Picker.ItemsSource>
             </Picker>
             <Entry Text="{Binding Edad}"
+                   x:Name="txtEdad"
                    Keyboard="Numeric"
                    HeightRequest="40" 
                    BackgroundColor="White" 
@@ -43,12 +47,14 @@
         </StackLayout>
         <StackLayout Orientation="Horizontal">
             <Entry Text="{Binding Peso}"
+                   x:Name="txtPeso"
                    Keyboard="Numeric"
                    HeightRequest="40" 
                    BackgroundColor="White" 
                    Placeholder="Peso" 
                    HorizontalOptions="FillAndExpand"/>
             <Entry Text="{Binding Estatura}"
+                   x:Name="txtEstatura"
                    Keyboard="Numeric"
                    HeightRequest="40" 
                    BackgroundColor="White" 

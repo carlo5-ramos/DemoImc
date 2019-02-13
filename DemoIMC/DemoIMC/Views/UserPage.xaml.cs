@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DemoIMC.Models;
+using DemoIMC.Services;
+using DemoIMC.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +17,8 @@ namespace DemoIMC.Views
 	{
 		public UserPage ()
 		{
-			InitializeComponent ();
+            NavigationPage.SetHasNavigationBar(this, false);
+            InitializeComponent ();
 		}
-	}
+    }
 }

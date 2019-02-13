@@ -24,12 +24,12 @@
             <Button Text="New User" 
                     Grid.Row="0" 
                     Grid.Column="1" 
-                    BorderRadius="10" 
+                    BorderRadius="70"
                     HeightRequest="40" 
-                    BorderColor="Blue" 
+                    BorderColor="#43a047" 
                     BackgroundColor="Transparent" 
-                    BorderWidth="1"  
-                    TextColor="Navy"  
+                    BorderWidth="3"  
+                    TextColor="Black"  
                     Command="{Binding AddUserCommand}" />
         </Grid>
         <ListView x:Name="UserListView" 
