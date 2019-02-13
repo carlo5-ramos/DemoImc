@@ -13,9 +13,10 @@
         <Picker x:Name="pkUsuario" 
                 Title="Selecione un Usuario"
                     ItemDisplayBinding="{Binding NombreCompleto}" 
-                    SelectedItem="{Binding UserSeleted}"></Picker>
+                    SelectedItem="{Binding UserSeleted}"/>
 
-        <StackLayout HorizontalOptions="Center"
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center"
                      VerticalOptions="Center">
             <Button x:Name="btnCalcular" 
                     Text="Calcular"
@@ -37,7 +38,8 @@
                     BorderWidth="3"  
                     TextColor="Black"   
                     Command="{Binding InsertCommand}" />
-            <Button x:Name="btnCancel" 
+            
+            <!--<Button x:Name="btnCancel" 
                     Text="Cancelar" 
                     Font="12"
                     BorderRadius="70" 
@@ -45,9 +47,63 @@
                     BorderColor="#43a047" 
                     BackgroundColor="Transparent" 
                     BorderWidth="3"  
-                    TextColor="Black"   
-                    Command="{Binding CancelarCommand}" />
+                    TextColor="Black" 
+                    Command="{Binding CancelarCommand}"-->
             
         </StackLayout>
+        <ScrollView>
+            <Grid Padding="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Rango"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+                <Label Text="Referencia"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+                <Label Text="Implicaciones de IMC"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   Grid.Row="0"
+                   Grid.Column="2"/>
+                <Label Text="0 a 5"
+                       Grid.Row="1"
+                       Grid.Column="0"/>
+                <Label Text="Delgadez III"
+                       Grid.Row="1"
+                       Grid.Column="1"/>
+                <Label Text="Postración, Atenia, Adinamia, Enfermedades degenerativas y Peligro de Muerte."
+                       Grid.Row="1"
+                       Grid.Column="2"/>
+                <Label Text="5 a 10"
+                       Grid.Row="2"
+                       Grid.Column="0"/>
+                <Label Text="Delgadez II"
+                       Grid.Row="2"
+                       Grid.Column="1"/>
+                <Label Text="Anorexia, Bulimia, Osteoporosis y Auto consumo de Masa muscular."
+                       Grid.Row="2"
+                       Grid.Column="2"/>
+            </Grid>
+        </ScrollView>
+        
     </StackLayout>
 </ContentPage>
