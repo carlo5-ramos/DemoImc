@@ -15,6 +15,7 @@ namespace DemoIMC.Views
 		public SettingPage ()
 		{
 			InitializeComponent ();
+           
 		}
 	}
 }

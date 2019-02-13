@@ -1,8 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DemoIMC.App">
+             x:Class="DemoIMC.App"> 
+           
     <Application.Resources>
+    
+        <!-- Colors -->
+        <Color x:Key="AppBackgroundColor">WhiteSmoke</Color>
 
+        <Color x:Key="AndroidNavigationBarColor">#00701a</Color>
+       
+        <Color x:Key="AndroidNavigationBarTextColor">White</Color>
+        <!-- Implicit styles -->
+        <Style TargetType="{x:Type NavigationPage}">
+            <Setter Property="BarBackgroundColor"
+                    Value="{OnPlatform  Android={StaticResource AndroidNavigationBarColor}}" />
+            <Setter Property="BarTextColor"
+                    Value="{OnPlatform  Android={StaticResource AndroidNavigationBarTextColor}}" />
+        </Style>
     </Application.Resources>
 </Application>
