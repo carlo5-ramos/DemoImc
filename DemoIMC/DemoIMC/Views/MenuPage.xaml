@@ -8,5 +8,4 @@
   <local:ListUserPage  />
   <local:ImcPage />
   <local:SettingPage />
-  
 </TabbedPage>

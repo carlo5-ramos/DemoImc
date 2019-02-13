@@ -14,12 +14,13 @@
         <Image  Source="logoappimc"/>
 
         <ListView x:Name="Listado" 
-                 
-                        ItemsSource="{Binding }" 
-                        SelectedItem="{Binding Seleccionado}" 
-                        RowHeight="115"
-                       
-                   ItemSelected="List_ItemSelected">
+                  ItemsSource="{Binding }" 
+                  SelectedItem="{Binding Seleccionado}" 
+                  RowHeight="115"
+                  ItemSelected="List_ItemSelected"
+                  IsPullToRefreshEnabled="False"
+                  RefreshCommand="{Binding RefreshCommand}"
+                  IsRefreshing="{Binding IsRefreshing}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

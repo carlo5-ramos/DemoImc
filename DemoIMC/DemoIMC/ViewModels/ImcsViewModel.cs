@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace DemoIMC.ViewModels
@@ -23,6 +24,7 @@ namespace DemoIMC.ViewModels
         private double imc;
         private DateTime fecharegistro;
         private Usuarios userselected;
+        //private bool _isRefreshing = false;
         #endregion
 
         #region Properties
@@ -98,6 +100,17 @@ namespace DemoIMC.ViewModels
 
         public List<Imcs> ListImcs { get; set; } = new List<Imcs>();
 
+        
+        //public bool IsRefreshing
+        //{
+        //    get { return _isRefreshing; }
+        //    set
+        //    {
+        //        _isRefreshing = value;
+        //        OnPropertyChanged(nameof(IsRefreshing));
+        //    }
+        //}
+
         #endregion
 
         #region Constructors
@@ -131,6 +144,11 @@ namespace DemoIMC.ViewModels
         #region Methods
         private async void Calcular(object obj)
         {
+            if (UserSeleted.Peso.Equals(0) && UserSeleted.Estatura.Equals(0))
+            {
+                await App.Current.MainPage.DisplayAlert("Advertencia", "Debe seleccionar un usuario para efectuar el calculo", "Aceptar");
+                return;
+            }
             double calcuImc = UserSeleted.Peso / Math.Pow(UserSeleted.Estatura, 2);
             await App.Current.MainPage.DisplayAlert("Mensaje de Aviso", "Su IMC es: " + calcuImc, "Aceptar");
         }
@@ -196,6 +214,18 @@ namespace DemoIMC.ViewModels
         public Command InsertCommand { get; set; }
         public Command CancelarCommand { get; set; }
         public Command DeleteCommand { get; set; }
+        //public ICommand RefreshCommand
+        //{
+        //    get
+        //    {
+        //        return new Command(async () =>
+        //       {
+        //           IsRefreshing = true;
+        //           GetImcs();
+        //           IsRefreshing = false;
+        //       });
+        //    }
+        //}
         #endregion
     }
 }
