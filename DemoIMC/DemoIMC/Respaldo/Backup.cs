@@ -40,7 +40,11 @@ namespace DemoIMC.Respaldo
                         // DestinationdocumentsPath = Path.Combine(DestinationdocumentsPath, sqliteFilename);
                         if (!File.Exists(Path.Combine(DestinationdocumentsPath, sqliteFilename)))
                         {
-
+                        //    List<string> PrevBackupFiles = Directory.GetFiles(SourcedocumentsPath).Where(x => x.Contains(".db")).ToList();
+                        //    foreach (string DBBkpPath in PrevBackupFiles)
+                        //    {
+                        //        System.IO.File.Copy(SourcedocumentsPath, Path.Combine(DestinationdocumentsPath, DBBkpPath), true);
+                        //    }
                             System.IO.File.Copy(SourcedocumentsPath, Path.Combine(DestinationdocumentsPath, sqliteFilename), true);
 
                         }
@@ -89,9 +93,13 @@ namespace DemoIMC.Respaldo
                         // DestinationdocumentsPath = Path.Combine(DestinationdocumentsPath, sqliteFilename);
                         if (!File.Exists(Path.Combine(DestinationdocumentsPath, sqliteFilename)))
                         {
-
-                            System.IO.File.Copy(SourcedocumentsPath, Path.Combine(DestinationdocumentsPath, sqliteFilename), true);
-
+                            var enlace = Path.Combine(DestinationdocumentsPath, sqliteFilename);
+                            //System.IO.File.Copy(SourcedocumentsPath, enlace, true);
+                            List<string> PrevBackupFiles = Directory.GetFiles(DestinationdocumentsPath).Where(x => x.Contains(".db")).ToList();
+                            foreach (string DBBkpPath in PrevBackupFiles)
+                            {
+                               System.IO.File.Copy(SourcedocumentsPath, enlace, true);
+                            }
                         }
                     }
 

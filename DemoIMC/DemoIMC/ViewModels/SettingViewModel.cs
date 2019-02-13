@@ -1,4 +1,5 @@
-﻿using DemoIMC.Views;
+﻿using DemoIMC.Respaldo;
+using DemoIMC.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,20 +12,24 @@ namespace DemoIMC.ViewModels
     {
         public SettingViewModel()
         {
-            ExportarCommand = new Command(() => Mensaje());
+            ExportarCommand = new Command(() => ExportarBD());
+            ImportarCommand = new Command(() => IMportarBD());
 
         }
 
         #region Metodos
 
 
-        public async void Mensaje()
+        public async void ExportarBD()
         {
-            var mensaje = await App.Current.MainPage.DisplayAlert("hola", "haz guardadi", "ok", "Cancel");
+            var exportar = new Backup();
+            
+
+            var mensaje = await App.Current.MainPage.DisplayAlert("Indicaciones ", "La base de datos estara en la carpeta download", "Aceptar", "Cancel");
 
             if (mensaje == true)
             {
-                await App.Current.MainPage.Navigation.PushAsync(new ListUserPage());
+                exportar.BackupDatabase(); 
             }
             else
             {
@@ -32,6 +37,25 @@ namespace DemoIMC.ViewModels
             }
             
         }
+
+        public async void IMportarBD()
+        {
+            var importar = new Backup();
+
+
+            var mensaje = await App.Current.MainPage.DisplayAlert("Indicaciones ", "La base de datos Tiene que estar en la carpeta IMCAPP dentro de la carpeta DOwnload", "Aceptar", "Cancel");
+
+            if (mensaje == true)
+            {
+                importar.Traer();
+            }
+            else
+            {
+                return;
+            }
+
+        }
+
 
 
         #endregion
