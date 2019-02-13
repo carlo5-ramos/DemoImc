@@ -10,7 +10,7 @@ namespace DemoIMC.Respaldo
     {
         public void BackupDatabase()
         {
-            var sqliteFilename = "db_imc.db3";
+            var sqliteFilename = "db_imc.db";
 
 
             string SourcedocumentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);
@@ -29,9 +29,9 @@ namespace DemoIMC.Respaldo
                         DestinationdocumentsPath += "/Demoimc/";
 
                         if (!Directory.Exists(DestinationdocumentsPath)) Directory.CreateDirectory(DestinationdocumentsPath);
-                        if (Directory.GetFiles(DestinationdocumentsPath).Where(x => x.Contains(".db3")).ToList() != null)
+                        if (Directory.GetFiles(DestinationdocumentsPath).Where(x => x.Contains(".db")).ToList() != null)
                         {
-                            List<string> PrevBackupFiles = Directory.GetFiles(DestinationdocumentsPath).Where(x => x.Contains(".db3")).ToList();
+                            List<string> PrevBackupFiles = Directory.GetFiles(DestinationdocumentsPath).Where(x => x.Contains(".db")).ToList();
                             foreach (string DBBkpPath in PrevBackupFiles)
                             {
                                 File.Delete(DBBkpPath);
@@ -40,12 +40,12 @@ namespace DemoIMC.Respaldo
                         // DestinationdocumentsPath = Path.Combine(DestinationdocumentsPath, sqliteFilename);
                         if (!File.Exists(Path.Combine(DestinationdocumentsPath, sqliteFilename)))
                         {
-                        //    List<string> PrevBackupFiles = Directory.GetFiles(SourcedocumentsPath).Where(x => x.Contains(".db")).ToList();
-                        //    foreach (string DBBkpPath in PrevBackupFiles)
-                        //    {
-                        //        System.IO.File.Copy(SourcedocumentsPath, Path.Combine(DestinationdocumentsPath, DBBkpPath), true);
-                        //    }
-                            System.IO.File.Copy(SourcedocumentsPath, Path.Combine(DestinationdocumentsPath, sqliteFilename), true);
+                            List<string> PrevBack = Directory.GetFiles(SourcedocumentsPath).Where(x => x.Contains(".db")).ToList();
+                            foreach (string DBBkpPath in PrevBack)
+                            {
+                                File.Copy(SourcedocumentsPath, Path.Combine(DestinationdocumentsPath, DBBkpPath), true);
+                            }
+                           // System.IO.File.Copy(SourcedocumentsPath, Path.Combine(DestinationdocumentsPath, sqliteFilename), true);
 
                         }
                     }
@@ -61,8 +61,8 @@ namespace DemoIMC.Respaldo
 
         public void Traer()
         {
-            var sqliteFilename = "db_imc.db3";
-            var Sqlsource = "Demoimc/db_imc.db3";
+            var sqliteFilename = "db_imc.db";
+            var Sqlsource = "Demoimc/db_imc.db";
 
 
 
@@ -82,9 +82,9 @@ namespace DemoIMC.Respaldo
                         DestinationdocumentsPath += "";
 
                         if (!Directory.Exists(DestinationdocumentsPath)) Directory.CreateDirectory(DestinationdocumentsPath);
-                        if (Directory.GetFiles(DestinationdocumentsPath).Where(x => x.Contains(".db3")).ToList() != null)
+                        if (Directory.GetFiles(DestinationdocumentsPath).Where(x => x.Contains(".db")).ToList() != null)
                         {
-                            List<string> PrevBackupFiles = Directory.GetFiles(DestinationdocumentsPath).Where(x => x.Contains(".db3")).ToList();
+                            List<string> PrevBackupFiles = Directory.GetFiles(DestinationdocumentsPath).Where(x => x.Contains(".db")).ToList();
                             foreach (string DBBkpPath in PrevBackupFiles)
                             {
                                 File.Delete(DBBkpPath);
