@@ -51,23 +51,24 @@
                     Command="{Binding CancelarCommand}"-->
             
         </StackLayout>
-        <ScrollView>
-            <Grid Padding="5">
+        <ScrollView >
+            <Grid Padding="6">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
                 <Label Text="Rango"
                    TextColor="Black"
@@ -101,6 +102,60 @@
                        Grid.Column="1"/>
                 <Label Text="Anorexia, Bulimia, Osteoporosis y Auto consumo de Masa muscular."
                        Grid.Row="2"
+                       Grid.Column="2"/>
+                <Label Text="10 a 18.5"
+                       Grid.Row="3"
+                       Grid.Column="0"/>
+                <Label Text="Delgadez I"
+                       Grid.Row="3"
+                       Grid.Column="1"/>
+                <Label Text="Trastornos digstivos, Debilidad, Fatiga cronica, Estrés y Ansiedad."
+                       Grid.Row="3"
+                       Grid.Column="2"/>
+                <Label Text="18.5 a 24.9"
+                       Grid.Row="4"
+                       Grid.Column="0"/>
+                <Label Text="Peso Normal"
+                       Grid.Row="4"
+                       Grid.Column="1"/>
+                <Label Text="Estado normal, Buen nivel de energia, Vitalidad y Buena condición fisica."
+                       Grid.Row="4"
+                       Grid.Column="2"/>
+                <Label Text="25 a 29.9"
+                       Grid.Row="5"
+                       Grid.Column="0"/>
+                <Label Text="Sobrepeso"
+                       Grid.Row="5"
+                       Grid.Column="1"/>
+                <Label Text="Fatiga, Enfermedades digestivas, Problemas cardiacos, Mala circulación en piernas y varices."
+                       Grid.Row="5"
+                       Grid.Column="2"/>
+                <Label Text="30 a 34.9"
+                       Grid.Row="6"
+                       Grid.Column="0"/>
+                <Label Text="Obesidad I"
+                       Grid.Row="6"
+                       Grid.Column="1"/>
+                <Label Text="Diabetes, Hipertención, Enfermedades cardiovasculares, Problemas articulares, Calculos biliares."
+                       Grid.Row="6"
+                       Grid.Column="2"/>
+                <Label Text="35 a 39.9"
+                       Grid.Row="7"
+                       Grid.Column="0"/>
+                <Label Text="Obesidad II"
+                       Grid.Row="7"
+                       Grid.Column="1"/>
+                <Label Text="Diabetes, Cancer, Angina de pecho, Infartos, Tromboflebitis, Arterosclerosis, Embolias."
+                       Grid.Row="7"
+                       Grid.Column="2"/>
+                <Label Text="40 o más"
+                       Grid.Row="8"
+                       Grid.Column="0"/>
+                <Label Text="Obesidad III"
+                       Grid.Row="8"
+                       Grid.Column="1"/>
+                <Label Text="Falta de aire, Somnolencia, Trombosis pulmonar, Ulceras varicosas, Cancer de prostata, Reflujo esofágico y  Discriminación social, laboral y sexual."
+                       Grid.Row="8"
                        Grid.Column="2"/>
             </Grid>
         </ScrollView>

@@ -146,7 +146,7 @@ namespace DemoIMC.ViewModels
         {
             
             double calcuImc = UserSeleted.Peso / (UserSeleted.Estatura * UserSeleted.Estatura);
-            await App.Current.MainPage.DisplayAlert("Mensaje de Aviso", "Su IMC es: " + calcuImc, "Aceptar");
+            await App.Current.MainPage.DisplayAlert("Resultado Obtenido", "Su IMC es: " + calcuImc + "\nUbicar en la tabla segun su calculo la Referencia e Implicaciones...", "Aceptar");
         }
 
         private async void Insert(object obj)
