@@ -25,12 +25,12 @@
             <Button Text="New User" 
                     Grid.Row="0" 
                     Grid.Column="1" 
-                    BorderRadius="70"
+                    BorderRadius="100"
                     HeightRequest="40" 
-                    BorderColor="#43a047" 
+                    BorderColor="#aee571" 
                     BackgroundColor="Transparent" 
-                    BorderWidth="3"  
-                    TextColor="Black"  
+                    BorderWidth="2"  
+                    TextColor="#4b830d"  
                     Command="{Binding AddUserCommand}" />
         </Grid>
         <ListView x:Name="UserListView" 
@@ -68,30 +68,30 @@
                             <Label Text="Peso" 
                                    Grid.Row="1"
                                    Grid.Column="0" 
-                                   TextColor="Black"
+                                   TextColor="#4b830d"
                                    FontAttributes="Bold"/>
                             <Label Text="Estatura" 
                                    Grid.Row="1" 
                                    Grid.Column="1" 
-                                   TextColor="Black" 
+                                   TextColor="#4b830d" 
                                    FontAttributes="Bold"/>
                             <Label Text="Edad" 
                                    Grid.Row="1" 
                                    Grid.Column="2" 
-                                   TextColor="Black"
+                                   TextColor="#4b830d"
                                    FontAttributes="Bold"/>
                             <Label Text="{Binding Peso}" 
                                    Grid.Row="2" 
                                    Grid.Column="0" 
-                                   TextColor="Black" />
+                                   TextColor="#c7cc00" />
                             <Label Text="{Binding Estatura}" 
                                    Grid.Row="2" 
                                    Grid.Column="1" 
-                                   TextColor="Black" />
+                                   TextColor="#c7cc00" />
                             <Label Text="{Binding Edad}" 
                                    Grid.Row="2" Grid.Column="2" 
                                    HorizontalOptions="FillAndExpand" 
-                                   TextColor="Black" />
+                                   TextColor="#c7cc00" />
 
                         </Grid>
                     </ViewCell>

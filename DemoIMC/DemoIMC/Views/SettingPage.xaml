@@ -11,27 +11,27 @@
 
   
     <StackLayout Padding="10,20,0,0">
-        <Label Text="Respaldo de la base de datos" VerticalTextAlignment="Center"/>
+        <Label Text="Respaldo de la base de datos" VerticalTextAlignment="Center" TextColor="#4b830d"/>
         <Button Text="Exportar" 
                  VerticalOptions="Start"
                 HorizontalOptions="Start"
-                    BorderRadius="70" 
+                    BorderRadius="100"
                     HeightRequest="40" 
-                    BorderColor="#43a047" 
+                    BorderColor="#aee571" 
                     BackgroundColor="Transparent" 
-                    BorderWidth="3"  
-                    TextColor="Black"   
+                    BorderWidth="2"  
+                    TextColor="#4b830d"  
                 Command="{Binding ExportarCommand}"/>
 
-        <Button Text="importar" 
+        <Button Text="Importar" 
                 VerticalOptions="Start"
                 HorizontalOptions="Start"
-                BorderRadius="70" 
+                BorderRadius="100"
                     HeightRequest="40" 
-                    BorderColor="#43a047" 
+                    BorderColor="#aee571" 
                     BackgroundColor="Transparent" 
-                    BorderWidth="3"  
-                    TextColor="Black"   
+                    BorderWidth="2"  
+                    TextColor="#4b830d" 
                  Command="{Binding ImportarCommand}"/>
 
 

@@ -145,19 +145,31 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\User.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\logoappimc.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\logoimc.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\logoappimc.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\logoimc.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\logoappimc.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\logoimc.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\logoappimc.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\logoimc.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\logoappimc.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\logoimc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\logoimc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\logoimc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\logoimc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\logoimc.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

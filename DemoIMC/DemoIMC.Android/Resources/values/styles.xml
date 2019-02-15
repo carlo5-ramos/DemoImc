@@ -15,19 +15,19 @@
     
     <!--Inicio de modificación de color establecido:#2196F3 -->
     
-    <item name="colorPrimary">#00701a</item>
+    <item name="colorPrimary">#4b830d</item>
     
     <!--Fin de modificación-->
     
     
     <!-- colorPrimaryDark is used for the status bar -->
-    <item name="colorPrimaryDark">#1976D2</item>
+    <item name="colorPrimaryDark">#4b830d</item>
     
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
     
     <!--Inicio de cambio de color en el alert pre-establecizo:FF4081 -->
-    <item name="colorAccent">#00701a</item>
+    <item name="colorAccent">#4b830d</item>
     <!--Fin de modificación-->
     
     <!-- You can also set colorControlNormal, colorControlActivated
