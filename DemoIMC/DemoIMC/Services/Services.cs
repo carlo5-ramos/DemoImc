@@ -17,8 +17,8 @@ namespace DemoIMC.Services
         #region Constructors
         public Services()
         {
-            string FilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-                "db_imc.db");
+            string FilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal),
+                "db_imc.db3");
 
             _conecction = new SQLiteAsyncConnection(FilePath);
             _conecction.CreateTableAsync<Usuarios>().Wait();
