@@ -144,19 +144,15 @@ namespace DemoIMC.ViewModels
         #region Methods
         private async void Calcular(object obj)
         {
-            if (UserSeleted.Peso.Equals(0) && UserSeleted.Estatura.Equals(0))
-            {
-                await App.Current.MainPage.DisplayAlert("Advertencia", "Debe seleccionar un usuario para efectuar el calculo", "Aceptar");
-                return;
-            }
-            double calcuImc = UserSeleted.Peso / Math.Pow(UserSeleted.Estatura, 2);
-            await App.Current.MainPage.DisplayAlert("Mensaje de Aviso", "Su IMC es: " + calcuImc, "Aceptar");
+            
+            double calcuImc = UserSeleted.Peso / (UserSeleted.Estatura * UserSeleted.Estatura);
+            await App.Current.MainPage.DisplayAlert("Resultado Obtenido", "Su IMC es: " + calcuImc + "\nUbicar en la tabla segun su calculo la Referencia e Implicaciones...", "Aceptar");
         }
 
         private async void Insert(object obj)
         {
             //CalculoImc();
-            double calcuImc = UserSeleted.Peso / Math.Pow(UserSeleted.Estatura, 2);
+            double calcuImc = UserSeleted.Peso / (Math.Pow(UserSeleted.Estatura, 2));
             var Servi = new Services<Imcs>();
             var imc = new Imcs();
             imc.UsuarioID = UsuarioID;

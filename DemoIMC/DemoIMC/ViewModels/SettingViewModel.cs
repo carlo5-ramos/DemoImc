@@ -25,7 +25,8 @@ namespace DemoIMC.ViewModels
             var exportar = new Backup();
             
 
-            var mensaje = await App.Current.MainPage.DisplayAlert("Indicaciones ", "La base de datos estara en la carpeta download", "Aceptar", "Cancel");
+            var mensaje = await App.Current.MainPage.DisplayAlert("Indicaciones ",
+                "La base de datos estara en la carpeta download", "Aceptar", "Cancel");
 
             if (mensaje == true)
             {
@@ -43,7 +44,8 @@ namespace DemoIMC.ViewModels
             var importar = new Backup();
 
 
-            var mensaje = await App.Current.MainPage.DisplayAlert("Indicaciones ", "La base de datos Tiene que estar en la carpeta IMCAPP dentro de la carpeta DOwnload", "Aceptar", "Cancel");
+            var mensaje = await App.Current.MainPage.DisplayAlert("Indicaciones ",
+                "La base de datos Tiene que estar en la carpeta IMCAPP dentro de la carpeta DOwnload", "Aceptar", "Cancel");
 
             if (mensaje == true)
             {

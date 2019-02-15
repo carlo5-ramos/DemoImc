@@ -13,9 +13,10 @@
         <Picker x:Name="pkUsuario" 
                 Title="Selecione un Usuario"
                     ItemDisplayBinding="{Binding NombreCompleto}" 
-                    SelectedItem="{Binding UserSeleted}"></Picker>
+                    SelectedItem="{Binding UserSeleted}"/>
 
-        <StackLayout HorizontalOptions="Center"
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center"
                      VerticalOptions="Center">
             <Button x:Name="btnCalcular" 
                     Text="Calcular"
@@ -24,7 +25,7 @@
                     BorderColor="#aee571" 
                     BackgroundColor="Transparent" 
                     BorderWidth="2"  
-                    TextColor="#4b830d"   
+                    TextColor="#4b830d"     
                     Command="{Binding CalcularCommand}" />
             <Button x:Name="btnInsert" 
                     Text="Calcular y Guardar" 
@@ -33,18 +34,129 @@
                     BorderColor="#aee571" 
                     BackgroundColor="Transparent" 
                     BorderWidth="2"  
-                    TextColor="#4b830d"  
+                    TextColor="#4b830d"     
                     Command="{Binding InsertCommand}" />
-            <Button x:Name="btnCancel" 
-                    Text="Cancelar"                 
-                    BorderRadius="100"
+            
+            <!--<Button x:Name="btnCancel" 
+                    Text="Cancelar" 
+                    Font="12"
+                    BorderRadius="70" 
                     HeightRequest="40" 
-                    BorderColor="#aee571" 
+                    BorderColor="#43a047" 
                     BackgroundColor="Transparent" 
-                    BorderWidth="2"  
-                    TextColor="#4b830d"
-                    Command="{Binding CancelarCommand}" />
+                    BorderWidth="3"  
+                    TextColor="Black" 
+                    Command="{Binding CancelarCommand}"-->
             
         </StackLayout>
+        <ScrollView >
+            <Grid Padding="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Rango"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+                <Label Text="Referencia"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+                <Label Text="Implicaciones de IMC"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   Grid.Row="0"
+                   Grid.Column="2"/>
+                <Label Text="0 a 5"
+                       Grid.Row="1"
+                       Grid.Column="0"/>
+                <Label Text="Delgadez III"
+                       Grid.Row="1"
+                       Grid.Column="1"/>
+                <Label Text="Postración, Atenia, Adinamia, Enfermedades degenerativas y Peligro de Muerte."
+                       Grid.Row="1"
+                       Grid.Column="2"/>
+                <Label Text="5 a 10"
+                       Grid.Row="2"
+                       Grid.Column="0"/>
+                <Label Text="Delgadez II"
+                       Grid.Row="2"
+                       Grid.Column="1"/>
+                <Label Text="Anorexia, Bulimia, Osteoporosis y Auto consumo de Masa muscular."
+                       Grid.Row="2"
+                       Grid.Column="2"/>
+                <Label Text="10 a 18.5"
+                       Grid.Row="3"
+                       Grid.Column="0"/>
+                <Label Text="Delgadez I"
+                       Grid.Row="3"
+                       Grid.Column="1"/>
+                <Label Text="Trastornos digstivos, Debilidad, Fatiga cronica, Estrés y Ansiedad."
+                       Grid.Row="3"
+                       Grid.Column="2"/>
+                <Label Text="18.5 a 24.9"
+                       Grid.Row="4"
+                       Grid.Column="0"/>
+                <Label Text="Peso Normal"
+                       Grid.Row="4"
+                       Grid.Column="1"/>
+                <Label Text="Estado normal, Buen nivel de energia, Vitalidad y Buena condición fisica."
+                       Grid.Row="4"
+                       Grid.Column="2"/>
+                <Label Text="25 a 29.9"
+                       Grid.Row="5"
+                       Grid.Column="0"/>
+                <Label Text="Sobrepeso"
+                       Grid.Row="5"
+                       Grid.Column="1"/>
+                <Label Text="Fatiga, Enfermedades digestivas, Problemas cardiacos, Mala circulación en piernas y varices."
+                       Grid.Row="5"
+                       Grid.Column="2"/>
+                <Label Text="30 a 34.9"
+                       Grid.Row="6"
+                       Grid.Column="0"/>
+                <Label Text="Obesidad I"
+                       Grid.Row="6"
+                       Grid.Column="1"/>
+                <Label Text="Diabetes, Hipertención, Enfermedades cardiovasculares, Problemas articulares, Calculos biliares."
+                       Grid.Row="6"
+                       Grid.Column="2"/>
+                <Label Text="35 a 39.9"
+                       Grid.Row="7"
+                       Grid.Column="0"/>
+                <Label Text="Obesidad II"
+                       Grid.Row="7"
+                       Grid.Column="1"/>
+                <Label Text="Diabetes, Cancer, Angina de pecho, Infartos, Tromboflebitis, Arterosclerosis, Embolias."
+                       Grid.Row="7"
+                       Grid.Column="2"/>
+                <Label Text="40 o más"
+                       Grid.Row="8"
+                       Grid.Column="0"/>
+                <Label Text="Obesidad III"
+                       Grid.Row="8"
+                       Grid.Column="1"/>
+                <Label Text="Falta de aire, Somnolencia, Trombosis pulmonar, Ulceras varicosas, Cancer de prostata, Reflujo esofágico y  Discriminación social, laboral y sexual."
+                       Grid.Row="8"
+                       Grid.Column="2"/>
+            </Grid>
+        </ScrollView>
+        
     </StackLayout>
 </ContentPage>
