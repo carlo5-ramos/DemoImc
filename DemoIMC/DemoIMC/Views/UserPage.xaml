@@ -8,83 +8,115 @@
     <ContentPage.BindingContext>
         <vm:UserViewModel/>
     </ContentPage.BindingContext>
-    <StackLayout Spacing="12">
-        <Entry Text="{Binding Nombre}"
+
+
+    <StackLayout  Padding="15" Margin="5"  >
+        <StackLayout BackgroundColor="#4b830d" Padding="3"  />
+        
+        <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            <Image Source="logoimc"  Grid.Row="0" Grid.ColumnSpan="1"/>
+            
+            <Entry Text="{Binding Nombre}"
                x:Name="txtNombre"
-               HeightRequest="40" 
-               BackgroundColor="White" 
+              
+               TextColor="Black"
                Placeholder="Nombre/s" 
-               HorizontalOptions="FillAndExpand"/>
-
-        <Entry  Text="{Binding Apellido}"
+               HorizontalOptions="FillAndExpand"
+               Grid.Row="1"
+               Grid.Column="0"/>
+                
+            <Entry  Text="{Binding Apellido}"
                 x:Name="txtApellido"
-                BackgroundColor="White" 
-                HeightRequest="40" 
+                
                 Placeholder="Apellido/s" 
-                HorizontalOptions="FillAndExpand"/>
-
-        <StackLayout Orientation="Horizontal">
+                HorizontalOptions="FillAndExpand" 
+                Grid.Row="1"
+                Grid.Column="1"/>
+                
             <Picker SelectedItem="{Binding Sexo}"
                     x:Name="pkSexo"
                     Title="Sexo" 
-                    BackgroundColor="White" 
-                    HeightRequest="40" 
-                    HorizontalOptions="FillAndExpand">
+                   
+                    HorizontalOptions="FillAndExpand"
+                    Grid.Row="3"
+                    Grid.Column="0">
                 <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Masculino</x:String>
-                        <x:String>Femenino</x:String>
-                    </x:Array>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Masculino</x:String>
+                            <x:String>Femenino</x:String>
+                        </x:Array>
                 </Picker.ItemsSource>
             </Picker>
+
+            <Label Text="Edad:" Grid.Row="2" Grid.Column="1"/>
             <Entry Text="{Binding Edad}"
                    x:Name="txtEdad"
-                   Keyboard="Numeric"
-                   HeightRequest="40" 
-                   BackgroundColor="White" 
-                   Placeholder="Edad" 
-                   HorizontalOptions="FillAndExpand"/>
-        </StackLayout>
-        <StackLayout Orientation="Horizontal">
+                   Keyboard="Numeric" 
+                  
+                  
+                   HorizontalOptions="FillAndExpand"
+                   Grid.Row="3"
+                   Grid.Column="1"/>
+
+            <Label Text="Peso:" Grid.Row="4" Grid.Column="0"/>
             <Entry Text="{Binding Peso}"
                    x:Name="txtPeso"
                    Keyboard="Numeric"
-                   HeightRequest="40" 
-                   BackgroundColor="White" 
-                   Placeholder="Peso" 
-                   HorizontalOptions="FillAndExpand"/>
+                    
+                   
+                   Grid.Row="5"
+                   Grid.Column="0"/>
+            
+            <Label Text="Estatura:" Grid.Row="4" Grid.Column="1"  />
             <Entry Text="{Binding Estatura}"
                    x:Name="txtEstatura"
                    Keyboard="Numeric"
-                   HeightRequest="40" 
-                   BackgroundColor="White" 
-                   Placeholder="Estatura" 
-                   HorizontalOptions="FillAndExpand"/>
-        </StackLayout>
+                   
+                   Placeholder="0.00" 
+                   HorizontalOptions="FillAndExpand"
+                   Grid.Row="5" 
+                   Grid.Column="1"/>
+            </Grid>
+
         <StackLayout Orientation="Horizontal"
                      HorizontalOptions="Center"
                      VerticalOptions="Center"
                      Padding="5,0,5,0">
+            
             <Button x:Name="btnInsert" 
-                    Text="Insert" 
-                    Font="12"
-                    BorderRadius="10" 
-                    HeightRequest="35" 
-                    BorderColor="Blue" 
+                    Text="Insert"
+                    BorderRadius="100"
+                    HeightRequest="40" 
+                    BorderColor="#aee571" 
                     BackgroundColor="Transparent" 
-                    BorderWidth="1"  
-                    TextColor="Navy"  
-                    Command="{Binding InsertCommand}" />
+                    BorderWidth="2"  
+                    TextColor="#4b830d"   
+                    Command="{Binding InsertCommand}"
+                    />
             <Button x:Name="btnUpdate" 
                     Text="Update" 
-                    Font="12"
-                    BorderRadius="10" 
-                    HeightRequest="35" 
-                    BorderColor="Blue" 
+                    BorderRadius="100"
+                    HeightRequest="40" 
+                    BorderColor="#aee571" 
                     BackgroundColor="Transparent" 
-                    BorderWidth="1"  
-                    TextColor="Navy"  
-                    Command="{Binding UpdateCommand}" />
+                    BorderWidth="2"  
+                    TextColor="#4b830d"  
+                    Command="{Binding UpdateCommand}"
+                   />
+
         </StackLayout>
         <StackLayout Orientation="Horizontal"
                      HorizontalOptions="Center"
@@ -92,24 +124,27 @@
                      Padding="5,0,5,0">
             <Button x:Name="btnCancel" 
                     Text="Cancelar" 
-                    Font="12"
-                    BorderRadius="10" 
-                    HeightRequest="35" 
-                    BorderColor="Blue" 
+                    BorderRadius="100"
+                    HeightRequest="40" 
+                    BorderColor="#aee571" 
                     BackgroundColor="Transparent" 
-                    BorderWidth="1"  
-                    TextColor="Navy"  
-                    Command="{Binding CancelarCommand}" />
+                    BorderWidth="2"  
+                    TextColor="#4b830d"    
+                    Command="{Binding CancelarCommand}"
+                     />
+
             <Button x:Name="btnDelete" 
                     Text="Delete" 
-                    Font="12"
-                    BorderRadius="10" 
-                    HeightRequest="35" 
-                    BorderColor="Blue" 
+                    BorderRadius="100"
+                    HeightRequest="40" 
+                    BorderColor="#aee571" 
                     BackgroundColor="Transparent" 
-                    BorderWidth="1"  
-                    TextColor="Navy"  
-                    Command="{Binding DeleteCommand}" />
+                    BorderWidth="2"  
+                    TextColor="#4b830d"    
+                    Command="{Binding DeleteCommand}"
+                    Grid.Row="5"
+                    Grid.Column="1"/>
         </StackLayout>
+        <StackLayout BackgroundColor="#4b830d" Padding="3" />
     </StackLayout>
 </ContentPage>

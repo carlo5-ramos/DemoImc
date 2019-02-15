@@ -2919,7 +2919,7 @@ namespace DemoIMC.Droid
 			public const int imc = 2130837773;
 			
 			// aapt resource value: 0x7f02010e
-			public const int logoappimc = 2130837774;
+			public const int logoimc = 2130837774;
 			
 			// aapt resource value: 0x7f02010f
 			public const int mr_button_connected_dark = 2130837775;
@@ -3965,7 +3965,7 @@ namespace DemoIMC.Droid
 			public const int launcher_foreground = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int logoappimc = 2130903043;
+			public const int logoimc = 2130903043;
 			
 			static Mipmap()
 			{
