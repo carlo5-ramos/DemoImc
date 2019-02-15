@@ -8,7 +8,7 @@
         <vm:ImcsViewModel/>
     </ContentPage.BindingContext>
     
-    <StackLayout>
+    <StackLayout Padding="15">
     <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -20,22 +20,26 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
             
         </Grid.ColumnDefinitions>
 
         <Label  Text="Datos Generales"
                 Grid.Row="0"
-                Grid.ColumnSpan="1"/>
+                Font="20"
+                Grid.ColumnSpan="1"
+                TextColor="Black"/>
         
         <Label  Text="Nombre"
                 Grid.Row="1"
-                Grid.ColumnSpan="1"/>
+                FontAttributes="Bold"
+                Grid.ColumnSpan="1"
+                TextColor="Black"/>
 
         <Label Text="{Binding NombreCompletoUser}" 
                HeightRequest="40" 
-               BackgroundColor="White" 
+               TextColor="#4b830d"
                HorizontalOptions="FillAndExpand"
                Grid.Row="2"
                Grid.ColumnSpan="1"/>
@@ -43,10 +47,13 @@
 
             <Label  Text="Genero"
                 Grid.Row="3"
-                Grid.Column="0"/>
+                FontAttributes="Bold"
+                Grid.Column="0"
+                TextColor="Black"/>
         
             <Label Text="{Binding SexoUser}"
                     HeightRequest="40"
+                   TextColor="#4b830d"
                    HorizontalOptions="FillAndExpand"
                    Grid.Row="4"
                    Grid.Column="0">
@@ -55,52 +62,63 @@
 
             <Label  Text="Edad"
                 Grid.Row="3"
-                Grid.Column="1"/>
+                FontAttributes="Bold"    
+                Grid.Column="1"
+                TextColor="Black"/>
         
             <Label Text="{Binding EdadUser, StringFormat='{0} años'}"
-                  HeightRequest="40" 
-                   BackgroundColor="White" 
-                  HorizontalOptions="FillAndExpand"
+                   HeightRequest="40" 
+                   TextColor="#4b830d"
+                   HorizontalOptions="FillAndExpand"
                    Grid.Row="4"
                    Grid.Column="1" />
 
             <Label  Text="Peso"
                 Grid.Row="5"
-                Grid.Column="0"/>
+                FontAttributes="Bold"    
+                Grid.Column="0"
+                TextColor="Black"/>
         
             <Label Text="{Binding PesoUser, StringFormat='{0} lb'}"
                   HeightRequest="40" 
-                   BackgroundColor="White" 
+                   TextColor="#4b830d" 
                    HorizontalOptions="FillAndExpand"
                    Grid.Row="6"
                 Grid.Column="0"/>
         
-            <Label  Text="estatura"
+            <Label  Text="Estatura"
                 Grid.Row="5"
-                Grid.Column="1"/>
+                FontAttributes="Bold"    
+                Grid.Column="1"
+                TextColor="Black"/>
         
             <Label Text="{Binding EstaturaUser, StringFormat='{0} mts'}"
                   HeightRequest="40" 
-                   BackgroundColor="White" 
+                   TextColor="#4b830d"
                    HorizontalOptions="FillAndExpand"
                    Grid.Row="6"
-                Grid.Column="1"/>
+                   Grid.Column="1"/>
+        
             <Label  Text="IMC"
                 Grid.Row="7"
-                Grid.Column="0"/>
+                FontAttributes="Bold"     
+                Grid.Column="0"
+                TextColor="Black"/>
+        
             <Label Text="{Binding Imc, StringFormat=' {0:F2} imc'}"
                    HeightRequest="40" 
-                   BackgroundColor="White" 
+                   TextColor="#c7cc00"  
                    HorizontalOptions="FillAndExpand"
                    Grid.Row="7"
-                Grid.Column="1"/>
+                   Grid.Column="1"/>
             
         
         </Grid>
-        <Label Text="{Binding FechaRegistro, StringFormat='Su Ultimo calculo fue: {0:dd/MM/yy}'}" 
+        <Label Text="{Binding FechaRegistro, StringFormat='Su ultimo calculo IMC fue: {0:dd/MM/yy}'}" 
                                    Grid.Row="2" 
                                    Grid.Column="0" 
-                                   TextColor="Black" />
+                                   TextColor="#c7cc00"
+                                   FontAttributes="Bold"/>
 
         <StackLayout Orientation="Horizontal"
                      HorizontalOptions="Center"
@@ -108,21 +126,21 @@
                      Padding="5,0,5,0">
             <Button x:Name="btnCancel" 
                     Text="Cancelar" 
-                    BorderRadius="10" 
+                   BorderRadius="100"
                     HeightRequest="40" 
-                    BorderColor="Blue" 
+                    BorderColor="#aee571" 
                     BackgroundColor="Transparent" 
-                    BorderWidth="1"  
-                    TextColor="Navy"  
+                    BorderWidth="2"  
+                    TextColor="#4b830d" 
                     Command="{Binding CancelarCommand}" />
             <Button x:Name="btnDelete" 
                     Text="Delete" 
-                    BorderRadius="10" 
+                   BorderRadius="100"
                     HeightRequest="40" 
-                    BorderColor="Blue" 
+                    BorderColor="#aee571" 
                     BackgroundColor="Transparent" 
-                    BorderWidth="1"  
-                    TextColor="Navy"  
+                    BorderWidth="2"  
+                    TextColor="#4b830d"
                     Command="{Binding DeleteCommand}" />
         </StackLayout>
     

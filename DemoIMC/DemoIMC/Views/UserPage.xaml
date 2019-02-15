@@ -65,13 +65,11 @@
             <Entry Text="{Binding Edad}"
                    x:Name="txtEdad"
                    Keyboard="Numeric" 
-                  
-                  
-                   HorizontalOptions="FillAndExpand"
+                  HorizontalOptions="FillAndExpand"
                    Grid.Row="3"
                    Grid.Column="1"/>
 
-            <Label Text="Peso:" Grid.Row="4" Grid.Column="0"/>
+            <Label Text="Peso(Kilogramos):" Grid.Row="4" Grid.Column="0"/>
             <Entry Text="{Binding Peso}"
                    x:Name="txtPeso"
                    Keyboard="Numeric"
