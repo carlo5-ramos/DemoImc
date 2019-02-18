@@ -25,7 +25,7 @@ namespace DemoIMC.Views
 
         private async void List_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            await App.Current.MainPage.Navigation.PushAsync(new Views.UserPage()
+            await App.Current.MainPage.Navigation.PushAsync(new Views.ActualizarUsuario()
             {
                 BindingContext = new UserViewModel((Usuarios)e.SelectedItem)
             });

@@ -22,7 +22,7 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button Text="New User" 
+            <Button Text="Nuevo usurario" 
                     Grid.Row="0" 
                     Grid.Column="1" 
                     BorderRadius="100"

@@ -134,7 +134,7 @@
                     TextColor="#4b830d" 
                     Command="{Binding CancelarCommand}" />
             <Button x:Name="btnDelete" 
-                    Text="Delete" 
+                    Text="Borrar" 
                    BorderRadius="100"
                     HeightRequest="40" 
                     BorderColor="#aee571" 
