@@ -23,6 +23,7 @@ namespace DemoIMC.Views
             base.OnAppearing();
             var Servi = new Services<Imcs>();
             Listado.ItemsSource = await Servi.GetAll();
+           
         }
 
         private async void List_ItemSelected(object sender, SelectedItemChangedEventArgs e)

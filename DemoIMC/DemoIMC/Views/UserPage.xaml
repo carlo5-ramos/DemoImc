@@ -11,6 +11,7 @@
 
 
     <StackLayout  Padding="15" Margin="5"  >
+      <Image Source="logoimc"  Grid.Row="0" Grid.ColumnSpan="1"/>
         <StackLayout BackgroundColor="#4b830d" Padding="3"  />
         
         <Grid>
@@ -27,7 +28,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-            <Image Source="logoimc"  Grid.Row="0" Grid.ColumnSpan="1"/>
+            
             
             <Entry Text="{Binding Nombre}"
                x:Name="txtNombre"
@@ -143,6 +144,6 @@
                     Grid.Row="5"
                     Grid.Column="1"/>
         </StackLayout>
-        <StackLayout BackgroundColor="#4b830d" Padding="3" />
+        <StackLayout  />
     </StackLayout>
 </ContentPage>
